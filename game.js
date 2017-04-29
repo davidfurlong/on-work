@@ -50,38 +50,49 @@ function TicTacToe(){
     return true;
   }
   this.checkBoard=function(){
+    for (var i=0; i<9; i++){
+      if (this.board[i]==null)  
+     return false;
 
+}
+    return true;
 
-   }
   }
     this.winner = function(board) {
-      if (this.board[2] == this.board[4] && this.board[2] == this.board[6]) {
+      switch(this.board[2] == this.board[4] && this.board[2] == this.board[6]) {
           return this.winner = this.board[2];
       }
-        if (this.board[0] == this.board[1] && this.board[0] == this.board[2]) {
+        case:this.board[0] == this.board[1] && this.board[0] == this.board[2]) {
             return this.winner = this.board[0];
+         break;   
         }
 
-        if (this.board[3] == this.board[4] && this.board[0] == this.board[5]) {
+        case:this.board[3] == this.board[4] && this.board[0] == this.board[5]) {
             return this.winner = this.board[3];
+      break;
         }
-        if (this.board[6] == this.board[7] && this.board[6] == this.board[8]) {
+        case:this.board[6] == this.board[7] && this.board[6] == this.board[8]) {
             return this.winner = this.board[6];
+            break;
         }
-        if (this.board[0] == this.board[3] && this.board[6] == this.board[7]) {
+        case:this.board[0] == this.board[3] && this.board[6] == this.board[7]) {
             return this.winner = this.board[0];
+     break; 
+      
         }
-        if (this.board[1] == this.board[4] && this.board[1] == this.board[7]) {
+        case:this.board[1] == this.board[4] && this.board[1] == this.board[7]) {
             return this.winner = this.board[1];
+      break;
         }
-        if (this.board[2] == this.board[5] && this.board[2] == this.board[8]) {
+        case:this.board[2] == this.board[5] && this.board[2] == this.board[8]) {
             return this.winner = this.board[2];
+      break;
         }
-        if (this.board[0] == this.board[4] && this.board[0] == this.board[8]) {
+        case:this.board[0] == this.board[4] && this.board[0] == this.board[8]) {
             return this.winner = this.board[0];
+      break;
         }
-         else {
-            return this.winner = false;
+      default:return this.winner = false;
         }
     }
 }
