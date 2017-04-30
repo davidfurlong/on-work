@@ -58,7 +58,9 @@ function TicTacToe(){
     return true;
 
   }
-    
+     // Why are you passing in board here? You only ever use this.board in this function, and this.board is not the same as board.
+     // You could either omit board in the parameters, or pass in the board when calling this.winner and use board instead of this.board
+    // in the function. The first way is probably better
     this.winner = function(board) {
       /* 
         This isn't how switch statements work.
